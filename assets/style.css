@@ -128,3 +128,65 @@ footer p {
     display: flex;
     gap: 15px;
 }
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+
+thead {
+    background-color: var(--border-color);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+th {
+    font-weight: 600;
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 122, 255, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    thead {
+        background-color: #2d2d2d;
+    }
+
+    tbody tr:hover {
+        background-color: rgba(0, 122, 255, 0.1);
+    }
+}
+
+/* Responsive table */
+@media (max-width: 600px) {
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 8px 10px;
+    }
+}
+
+/* Legal notice styles */
+.legal-notice {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 122, 255, 0.05);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.thank-you {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--secondary-text);
+}
