@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calmony - All Your Calendars, One Place</title>
+    <meta name="description" content="Calmony is a unified calendar app for macOS that brings Google, iCloud, and Microsoft calendars together in one beautiful interface.">
+    <link rel="stylesheet" href="/assets/style.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--secondary-text);
+            margin-bottom: 30px;
+        }
+        .features {
+            margin: 40px 0;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .feature h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .feature p {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        .cta {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: opacity 0.2s;
+        }
+        .btn:hover {
+            opacity: 0.9;
+            text-decoration: none;
+        }
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+        .screenshot {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Calmony</h1>
+            <p class="tagline">All Your Calendars, One Place</p>
+            <p>A unified calendar app for macOS that brings Google, iCloud, and Microsoft calendars together in one beautiful interface.</p>
+        </div>
+
+        <div class="screenshot">
+            <img src="/calmony/images/screenshot.png" alt="Calmony - Unified Calendar App for macOS">
+        </div>
+
+        <div class="features">
+            <h2 style="text-align: center;">Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">📅</div>
+                    <h3>Multi-Calendar Sync</h3>
+                    <p>Google, iCloud, and Microsoft Exchange in one view</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Quick Add</h3>
+                    <p>Natural language input for instant event creation</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Time Analytics</h3>
+                    <p>Understand how you spend your time</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✅</div>
+                    <h3>Reminders Integration</h3>
+                    <p>Apple Reminders built right in</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <a href="https://apps.apple.com/app/calmony" class="btn">Download on Mac App Store</a>
+            <p class="meta" style="margin-top: 15px;">Available for macOS</p>
+        </div>
+
+        <div class="legal-links">
+            <a href="/calmony/privacy.html">Privacy Policy</a>
+            <a href="/calmony/terms.html">Terms of Service</a>
+            <a href="/calmony/support.html">Support</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Euigyo Kim. All rights reserved.</p>
+            <p><a href="/">Back to Home</a></p>
+        </footer>
+    </div>
+</body>
+</html>
