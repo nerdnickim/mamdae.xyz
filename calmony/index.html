@@ -18,52 +18,149 @@
         .tagline {
             font-size: 1.3rem;
             color: var(--secondary-text);
+            margin-bottom: 20px;
+        }
+        .hero-screenshot {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .hero-screenshot img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Pain Points Section */
+        .pain-points {
+            margin: 60px 0;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, rgba(255, 59, 48, 0.05) 0%, rgba(255, 149, 0, 0.05) 100%);
+            border-radius: 16px;
+        }
+        .pain-points h2 {
+            text-align: center;
+            margin-top: 0;
             margin-bottom: 30px;
         }
+        .pain-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .pain-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .pain-list li:last-child {
+            border-bottom: none;
+        }
+        .pain-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .pain-content strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .pain-content span {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+        }
+
+        /* Solutions Section */
+        .solutions {
+            margin: 60px 0;
+        }
+        .solutions h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .solution-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        .solution-item:nth-child(even) {
+            direction: rtl;
+        }
+        .solution-item:nth-child(even) > * {
+            direction: ltr;
+        }
+        .solution-text h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        .solution-text p {
+            color: var(--secondary-text);
+            margin-bottom: 0;
+        }
+        .solution-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            .solution-item {
+                grid-template-columns: 1fr;
+            }
+            .solution-item:nth-child(even) {
+                direction: ltr;
+            }
+        }
+
+        /* Features Grid */
         .features {
-            margin: 40px 0;
+            margin: 60px 0;
+            text-align: center;
         }
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 25px;
-            margin-top: 25px;
+            margin-top: 30px;
         }
         .feature {
-            text-align: center;
-            padding: 20px;
+            padding: 25px 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
         }
         .feature-icon {
             font-size: 2.5rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .feature h3 {
             margin-top: 0;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
         .feature p {
             color: var(--secondary-text);
             font-size: 0.95rem;
             margin-bottom: 0;
         }
-        .cta {
+
+        /* Coming Soon */
+        .coming-soon {
             text-align: center;
             margin: 50px 0;
+            padding: 30px;
+            background-color: rgba(0, 122, 255, 0.08);
+            border-radius: 12px;
         }
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: opacity 0.2s;
+        .coming-soon h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
         }
-        .btn:hover {
-            opacity: 0.9;
-            text-decoration: none;
+        .coming-soon p {
+            color: var(--secondary-text);
+            margin-bottom: 0;
         }
+
         .legal-links {
             display: flex;
             justify-content: center;
@@ -71,15 +168,6 @@
             margin-top: 40px;
             padding-top: 30px;
             border-top: 1px solid var(--border-color);
-        }
-        .screenshot {
-            margin: 40px 0;
-            text-align: center;
-        }
-        .screenshot img {
-            max-width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -91,39 +179,128 @@
             <p>A unified calendar app for macOS that brings Google, iCloud, and Microsoft calendars together in one beautiful interface.</p>
         </div>
 
-        <div class="screenshot">
-            <img src="/calmony/images/screenshot.png" alt="Calmony - Unified Calendar App for macOS">
+        <div class="hero-screenshot">
+            <img src="/calmony/images/screenshot.png" alt="Calmony - Unified Calendar App">
         </div>
 
-        <div class="features">
-            <h2 style="text-align: center;">Features</h2>
-            <div class="feature-grid">
-                <div class="feature">
-                    <div class="feature-icon">📅</div>
-                    <h3>Multi-Calendar Sync</h3>
-                    <p>Google, iCloud, and Microsoft Exchange in one view</p>
+        <!-- Pain Points -->
+        <div class="pain-points">
+            <h2>Sound Familiar?</h2>
+            <ul class="pain-list">
+                <li>
+                    <span class="pain-icon">😤</span>
+                    <div class="pain-content">
+                        <strong>"I have to open multiple tabs just to see all my calendars"</strong>
+                        <span>Work on Outlook, personal on Google, family on iCloud... switching between them is exhausting.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="pain-icon">⏳</span>
+                    <div class="pain-content">
+                        <strong>"My calendar sync is always delayed"</strong>
+                        <span>Apple Calendar takes forever to sync Google events. You miss meetings because of sync delays.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="pain-icon">💸</span>
+                    <div class="pain-content">
+                        <strong>"$60/year just for a calendar app?"</strong>
+                        <span>Premium calendar apps charge subscription fees that add up over time.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="pain-icon">⌨️</span>
+                    <div class="pain-content">
+                        <strong>"Why can't I just type 'Meeting tomorrow 3pm'?"</strong>
+                        <span>Most calendar apps make you click through multiple fields to create a simple event.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="pain-icon">📋</span>
+                    <div class="pain-content">
+                        <strong>"My calendar and reminders are in separate apps"</strong>
+                        <span>You want to see your schedule and to-do list together, but they're always split apart.</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Solutions with Screenshots -->
+        <div class="solutions">
+            <h2>Calmony Solves These Problems</h2>
+
+            <div class="solution-item">
+                <div class="solution-text">
+                    <h3>All Calendars in One View</h3>
+                    <p>Connect Google, iCloud, and Microsoft Exchange accounts seamlessly. See all your events in a single, unified interface. No more tab switching or app juggling.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Quick Add</h3>
-                    <p>Natural language input for instant event creation</p>
+                <div class="solution-image">
+                    <img src="/calmony/images/account-sync.png" alt="Multi-account calendar sync">
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">📊</div>
-                    <h3>Time Analytics</h3>
-                    <p>Understand how you spend your time</p>
+            </div>
+
+            <div class="solution-item">
+                <div class="solution-text">
+                    <h3>Natural Language Quick Add</h3>
+                    <p>Just type "Team meeting tomorrow 3pm" or "다음주 월요일 오전 10시 프레젠테이션" and Calmony understands. Create events in seconds, not minutes.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">✅</div>
-                    <h3>Reminders Integration</h3>
-                    <p>Apple Reminders built right in</p>
+                <div class="solution-image">
+                    <img src="/calmony/images/quick-add.png" alt="Natural language event creation">
+                </div>
+            </div>
+
+            <div class="solution-item">
+                <div class="solution-text">
+                    <h3>Time Analytics Built-in</h3>
+                    <p>Understand how you spend your time. Categorize events and get insights into your work-life balance. Make better decisions about your schedule.</p>
+                </div>
+                <div class="solution-image">
+                    <img src="/calmony/images/time-analytics.png" alt="Time analytics and insights">
+                </div>
+            </div>
+
+            <div class="solution-item">
+                <div class="solution-text">
+                    <h3>Desktop Widget</h3>
+                    <p>Quick glance at your upcoming events right from your desktop. Stay on top of your schedule without opening the full app.</p>
+                </div>
+                <div class="solution-image">
+                    <img src="/calmony/images/widget.png" alt="Desktop widget">
                 </div>
             </div>
         </div>
 
-        <div class="cta">
-            <a href="https://apps.apple.com/app/calmony" class="btn">Download on Mac App Store</a>
-            <p class="meta" style="margin-top: 15px;">Available for macOS</p>
+        <!-- Additional Features -->
+        <div class="features">
+            <h2>And More</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>All data stored locally. Your calendar stays on your device.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✅</div>
+                    <h3>Reminders Integration</h3>
+                    <p>Apple Reminders built right into your calendar view.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⌨️</div>
+                    <h3>Keyboard Shortcuts</h3>
+                    <p>Navigate and create events without touching your mouse.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌙</div>
+                    <h3>Dark Mode</h3>
+                    <p>Beautiful dark interface that's easy on your eyes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coming Soon -->
+        <div class="coming-soon">
+            <h3>Coming Soon to Mac App Store</h3>
+            <p>Calmony is currently in review. Sign up to be notified when it's available.</p>
         </div>
 
         <div class="legal-links">
